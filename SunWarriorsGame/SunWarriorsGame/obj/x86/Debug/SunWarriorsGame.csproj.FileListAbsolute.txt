@@ -1,0 +1,7 @@
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\SunWarriorsGame.exe
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\SunWarriorsGame.pdb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\obj\x86\Debug\SunWarriorsGame.csprojResolveAssemblyReference.cache
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\obj\x86\Debug\SunWarriorsGame.exe
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\obj\x86\Debug\SunWarriorsGame.pdb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\background.xnb
