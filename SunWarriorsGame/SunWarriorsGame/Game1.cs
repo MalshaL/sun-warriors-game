@@ -38,7 +38,7 @@ namespace SunWarriorsGame
         /// and initialize them as well.
         protected override void Initialize()
         {
-            graphics.PreferredBackBufferWidth = 1200;             
+            graphics.PreferredBackBufferWidth = 1100;             
             graphics.PreferredBackBufferHeight = 680;              
             graphics.IsFullScreen = false;              
             graphics.ApplyChanges();              
@@ -98,7 +98,13 @@ namespace SunWarriorsGame
 
         private void DrawGrid()
         {
-            spriteBatch.Draw(defaultGridTexture, new Vector2(200,100), Color.White);
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    spriteBatch.Draw(defaultGridTexture, new Vector2(350+(j*60), 50+(i*60)), Color.White);
+                }
+            }
         }
     }
 }

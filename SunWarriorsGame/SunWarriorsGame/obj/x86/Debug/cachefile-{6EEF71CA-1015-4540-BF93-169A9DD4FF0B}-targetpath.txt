@@ -1,2 +1,2 @@
-Content\background.xnb
 Content\default.xnb
+Content\background.xnb
