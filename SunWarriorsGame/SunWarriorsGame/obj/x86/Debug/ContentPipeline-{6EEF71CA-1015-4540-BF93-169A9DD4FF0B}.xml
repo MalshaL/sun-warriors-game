@@ -10,6 +10,15 @@
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\background.xnb</Output>
       <Time>2015-12-08T23:24:11.7286353+05:30</Time>
     </Item>
+    <Item>
+      <Source>default.png</Source>
+      <Name>default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\default.xnb</Output>
+      <Time>2015-12-09T09:28:27.7995756+05:30</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{6EEF71CA-1015-4540-BF93-169A9DD4FF0B}</ContentProjectGUID>

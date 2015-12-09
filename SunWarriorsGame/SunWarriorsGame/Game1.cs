@@ -8,21 +8,26 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Tank_Game;
+using TankClient;
 
 namespace SunWarriorsGame
 {
     /// This is the main type for the game
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        GridEntity[,] grid;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         GraphicsDevice device;
         int screenWidth;
         int screenHeight;
         Texture2D backgroundTexture;
+        Texture2D defaultGridTexture;
 
-        public Game1()
+        public Game1(GridEntity[,] g)
         {
+            this.grid = g;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
@@ -50,6 +55,7 @@ namespace SunWarriorsGame
             screenWidth = device.PresentationParameters.BackBufferWidth;
             screenHeight = device.PresentationParameters.BackBufferHeight;
             backgroundTexture = Content.Load<Texture2D>("background");
+            defaultGridTexture = Content.Load<Texture2D>("default");
         }
 
         /// UnloadContent will be called once per game and is the place to unload
@@ -76,7 +82,8 @@ namespace SunWarriorsGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-            DrawBackground();             
+            DrawBackground();
+            DrawGrid();
             spriteBatch.End();
             base.Draw(gameTime);
         }
@@ -89,7 +96,7 @@ namespace SunWarriorsGame
 
         private void DrawGrid()
         {
-
+            spriteBatch.Draw(defaultGridTexture, new Vector2(200,100), Color.White);
         }
     }
 }

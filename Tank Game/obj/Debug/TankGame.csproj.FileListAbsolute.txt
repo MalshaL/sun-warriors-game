@@ -1,0 +1,8 @@
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\Tank Game\obj\Debug\TankGame.csprojResolveAssemblyReference.cache
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\Tank Game\obj\Debug\Tank_Game.GUI.resources
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\Tank Game\obj\Debug\TankGame.csproj.GenerateResource.Cache
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\Tank Game\bin\Debug\Tank Game.exe.config
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\Tank Game\bin\Debug\Tank Game.exe
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\Tank Game\bin\Debug\Tank Game.pdb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\Tank Game\obj\Debug\Tank Game.exe
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\Tank Game\obj\Debug\Tank Game.pdb
