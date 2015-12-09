@@ -46,6 +46,8 @@ namespace SunWarriorsGame
             base.Initialize();
         }
 
+
+
         /// LoadContent will be called once per game and is the place to load all of the content.
         protected override void LoadContent()
         {
