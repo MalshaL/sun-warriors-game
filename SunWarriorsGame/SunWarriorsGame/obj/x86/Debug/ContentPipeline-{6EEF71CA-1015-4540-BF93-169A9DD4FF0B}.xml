@@ -2,15 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>default.png</Source>
-      <Name>default</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\default.xnb</Output>
-      <Time>2015-12-09T09:28:27.7995756+05:30</Time>
-    </Item>
-    <Item>
       <Source>background.png</Source>
       <Name>background</Name>
       <Importer>TextureImporter</Importer>
@@ -18,6 +9,69 @@
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\background.xnb</Output>
       <Time>2015-12-09T20:37:33.3572085+05:30</Time>
+    </Item>
+    <Item>
+      <Source>landTexture.png</Source>
+      <Name>landTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\landTexture.xnb</Output>
+      <Time>2015-12-09T22:47:16.3204503+05:30</Time>
+    </Item>
+    <Item>
+      <Source>stoneTexture.png</Source>
+      <Name>stoneTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\stoneTexture.xnb</Output>
+      <Time>2015-12-09T22:47:16.3354526+05:30</Time>
+    </Item>
+    <Item>
+      <Source>tank.png</Source>
+      <Name>tank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank.xnb</Output>
+      <Time>2015-12-16T08:26:10.1071409+05:30</Time>
+    </Item>
+    <Item>
+      <Source>waterTexture.png</Source>
+      <Name>waterTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\waterTexture.xnb</Output>
+      <Time>2015-12-09T22:47:16.3904917+05:30</Time>
+    </Item>
+    <Item>
+      <Source>brickTexture.png</Source>
+      <Name>brickTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\brickTexture.xnb</Output>
+      <Time>2015-12-09T22:48:02.4150534+05:30</Time>
+    </Item>
+    <Item>
+      <Source>coin.png</Source>
+      <Name>coin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\coin.xnb</Output>
+      <Time>2015-12-09T23:12:07.9286866+05:30</Time>
+    </Item>
+    <Item>
+      <Source>lifepack.png</Source>
+      <Name>lifepack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\lifepack.xnb</Output>
+      <Time>2015-12-16T08:34:14.0429968+05:30</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

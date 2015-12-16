@@ -8,4 +8,10 @@ F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Deb
 F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\obj\x86\Debug\SunWarriorsGame.GUI.resources
 F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\obj\x86\Debug\SunWarriorsGame.csproj.GenerateResource.Cache
 F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Microsoft.QualityTools.Testing.Fakes.dll
-F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\default.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\landTexture.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\stoneTexture.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\waterTexture.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\brickTexture.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\coin.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\lifepack.xnb

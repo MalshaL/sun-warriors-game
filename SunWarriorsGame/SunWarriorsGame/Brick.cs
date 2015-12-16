@@ -12,7 +12,7 @@ namespace Tank_Game
         int damageLevel = 0;
         public Brick(Point p) : base(p)
         {
-            this.setName("B  ");
+            this.setName("brick");
             //this.setDamageLevel(damageLevel);
         }
 

@@ -33,7 +33,7 @@ namespace Tank_Game
             setPrevP(currentP);
         }
 
-        public void updatePlayer(Player p, Point currentP, int direction, int isShot, int health, int coins, int points)
+        public override void updatePlayer(GridEntity p, Point currentP, int direction, int isShot, int health, int coins, int points)
         {
             p.setCurrentP(currentP);
             p.setDirection(direction);
@@ -44,17 +44,29 @@ namespace Tank_Game
             p.setPrevP(currentP);
         }
 
-        public void setDirection(int d)
+        public override void setDirection(int d)
         {
             this.direction = d;
         }
 
-        public int getDirection()
+        public override float getDirection()
         {
-            return direction;
+            switch (direction)
+            {
+                case 0:
+                    return 0;
+                case 1:
+                    return 90;
+                case 2:
+                    return 180;
+                case 3:
+                    return 270;
+                default:
+                    return 0;
+            }
         }
 
-        public void setCurrentP(Point p)
+        public override void setCurrentP(Point p)
         {
             this.currentP = p;
         }
@@ -64,17 +76,17 @@ namespace Tank_Game
             return currentP;
         }
 
-        public void setPrevP(Point p)
+        public override void setPrevP(Point p)
         {
             this.prevP = p;
         }
 
-        public Point getPrevP()
+        public override Point getPrevP()
         {
             return prevP;
         }
 
-        public void setIsShot(int n)
+        public override void setIsShot(int n)
         {
             this.shot = n;
         }
@@ -84,7 +96,7 @@ namespace Tank_Game
             return shot;
         }
 
-        public void setPoints(int n)
+        public override void setPoints(int n)
         {
             this.pointsEarned = n;
         }
@@ -94,7 +106,7 @@ namespace Tank_Game
             return pointsEarned;
         }
 
-        public void setCoins(int n)
+        public override void setCoins(int n)
         {
             this.coins = n;
         }
@@ -104,7 +116,7 @@ namespace Tank_Game
             return coins;
         }
 
-        public void setHealth(int n)
+        public override void setHealth(int n)
         {
             this.health = n;
         }

@@ -12,7 +12,10 @@ namespace Tank_Game
     {
         #region Variables
 
-        private MyPlayer me;
+        private static GameEngine gameEngine;
+        private static object syncRoot = new object();
+        //private static Game1 game;
+        private GridEntity me;
         private string playerName;      //player name (client)
         private int playerNum;          //player number
         private Point startLoc;         //start location of player
@@ -38,6 +41,19 @@ namespace Tank_Game
             msgTypes.Add('C');
             msgTypes.Add('L');
             //generateGrid(mapDetails);        
+        }
+
+        public static GameEngine GetGameEngine()        //singleton
+        {
+            if (gameEngine == null)
+		    {
+			    lock(syncRoot)
+			    {
+				    if (gameEngine == null)
+				    { gameEngine = new GameEngine();	}
+			    }            
+		    }
+		    return gameEngine;
         }
 
         public void handleMessage(String message)
@@ -98,7 +114,7 @@ namespace Tank_Game
             startLoc = new Point(int.Parse(loc.Split(',')[0]), int.Parse(loc.Split(',')[1]));
             starDir = int.Parse(tokens[2]);
             me = new MyPlayer(startLoc, playerName, starDir);
-            Console.WriteLine("Player is: "+me.getName() + " at " + me.getCurrentP() + " facing " + me.getDirection());
+            //Console.WriteLine("Player is: "+me.getName() + " at " + me.getCurrentP() + " facing " + me.getDirection());
         }
 
         private void generateGrid(string map)
@@ -119,7 +135,7 @@ namespace Tank_Game
             }
             setLocations(map, grid);
             displayGrid(grid);
-            Program2.Main(grid);
+            //Program2.Main();
         }
 
         private void setLocations(string map, GridEntity[,] grid)
@@ -219,6 +235,7 @@ namespace Tank_Game
             }
             //updateBricks(splittedValues[splittedValues.Length - 1]);
             displayGrid(grid);
+            //game.setGrid(grid);
         }
 
 
@@ -275,6 +292,11 @@ namespace Tank_Game
             grid[p.Y, p.X] = new LifePack(p, int.Parse(tokens[2]), 0);
             //coinLocations.Add(p);
             //LifePack lifepack = new LifePack(p, int.Parse(tokens[2]), 0);
+        }
+
+        public GridEntity[,] getGrid()
+        {
+            return grid;
         }
     }
 }

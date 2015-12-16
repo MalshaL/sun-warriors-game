@@ -11,7 +11,7 @@ namespace Tank_Game
     {
         public Stone(Point p) : base(p)
         {
-            this.setName("S  ");
+            this.setName("stone");
         }
     }
 }

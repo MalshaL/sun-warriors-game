@@ -13,7 +13,9 @@ namespace TankClient
 {
     class ConnectClient
     {
-        GameEngine gameEngine = new GameEngine();
+        private static ConnectClient clientObject;
+        private static object syncRoot = new object();
+        GameEngine gameEngine = GameEngine.GetGameEngine();
         //Inisialize client to communicate with server
         private TcpClient client;
 
@@ -35,6 +37,18 @@ namespace TankClient
         // String clientmag = Console.ReadLine();
         Move command = new Move();
 
+        public static ConnectClient GetClient()        //singleton
+        {
+            if (clientObject == null)
+            {
+                lock (syncRoot)
+                {
+                    if (clientObject == null)
+                    { clientObject = new ConnectClient(); }
+                }
+            }
+            return clientObject;
+        }
 
         public void ReceiveData()
         {

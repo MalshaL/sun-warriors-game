@@ -16,7 +16,7 @@ namespace Tank_Game
 
         public CoinPile(Point p, int lifeTime, int appearTime, int value) : base(p)
         {
-            this.setName("C  ");
+            this.setName("coin");
             this.setValue(value);
             this.setLifeTime(lifeTime);
             this.setAppearTime(appearTime);

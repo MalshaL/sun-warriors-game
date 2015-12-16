@@ -15,7 +15,7 @@ namespace Tank_Game
 
         public LifePack(Point p, int lifeTime, int appearTime) : base(p)
         {
-            this.setName("L  ");
+            this.setName("lifepack");
             this.setLifeTime(lifeTime);
             this.setAppearTime(appearTime);
             this.setDisappearTime(appearTime, lifeTime);

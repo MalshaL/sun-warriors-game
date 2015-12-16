@@ -16,22 +16,36 @@ namespace SunWarriorsGame
     /// This is the main type for the game
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        GridEntity[,] grid;
+        GameEngine gameEngine;
+        ConnectClient client;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         GraphicsDevice device;
         int screenWidth;
         int screenHeight;
         Texture2D backgroundTexture;
-        Texture2D defaultGridTexture;
+        Texture2D landTexture;
+        Texture2D brickTexture;
+        Texture2D stoneTexture;
+        Texture2D waterTexture;
+        Texture2D coinTexture;
+        Texture2D lifepackTexture;
+        Texture2D playerTexture;
 
-        public Game1(GridEntity[,] g)
+        public Game1()
         {
-            this.grid = g;
+            gameEngine = GameEngine.GetGameEngine();
+            client = ConnectClient.GetClient();
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
 
+        public void setGrid(GridEntity[,] g)
+        {
+            //grid = gameEngine.getGrid();
+        }
+
+        
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
         /// related content.  Calling base.Initialize will enumerate through any components
@@ -57,7 +71,13 @@ namespace SunWarriorsGame
             screenWidth = device.PresentationParameters.BackBufferWidth;
             screenHeight = device.PresentationParameters.BackBufferHeight;
             backgroundTexture = Content.Load<Texture2D>("background");
-            defaultGridTexture = Content.Load<Texture2D>("default");
+            landTexture = Content.Load<Texture2D>("landTexture");
+            brickTexture = Content.Load<Texture2D>("brickTexture");
+            waterTexture = Content.Load<Texture2D>("waterTexture");
+            stoneTexture = Content.Load<Texture2D>("stoneTexture");
+            coinTexture = Content.Load<Texture2D>("coin");
+            lifepackTexture = Content.Load<Texture2D>("lifepack");
+            playerTexture = Content.Load<Texture2D>("tank");
         }
 
         /// UnloadContent will be called once per game and is the place to unload
@@ -75,8 +95,31 @@ namespace SunWarriorsGame
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            //DrawGrid(getGrid());
+            ProcessKeyboard();
             base.Update(gameTime);
         }
+
+         private void ProcessKeyboard()  
+         {      
+             KeyboardState keyState = Keyboard.GetState();
+             if (keyState.IsKeyDown(Keys.Left))
+             {
+                 client.SendData("LEFT#");
+             }
+             if (keyState.IsKeyDown(Keys.Right))
+             {
+                 client.SendData("RIGHT#");
+             }
+             if (keyState.IsKeyDown(Keys.Up))
+             {
+                 client.SendData("UP#");
+             }
+             if (keyState.IsKeyDown(Keys.Down))
+             {
+                 client.SendData("DOWN#");
+             } 
+         } 
 
         /// This is called when the game should draw itself.
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
@@ -85,7 +128,7 @@ namespace SunWarriorsGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
             DrawBackground();
-            DrawGrid();
+            DrawGrid(gameEngine.getGrid());
             spriteBatch.End();
             base.Draw(gameTime);
         }
@@ -96,13 +139,42 @@ namespace SunWarriorsGame
              spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White); 
         }
 
-        private void DrawGrid()
+        private void DrawGrid(GridEntity[,] g)
         {
-            for (int i = 0; i < 10; i++)
+            if (g != null)
             {
-                for (int j = 0; j < 10; j++)
+                for (int i = 0; i < 10; i++)
                 {
-                    spriteBatch.Draw(defaultGridTexture, new Vector2(350+(j*60), 50+(i*60)), Color.White);
+                    for (int j = 0; j < 10; j++)
+                    {
+                        Vector2 position = new Vector2(350 + (j * 60), 50 + (i * 60));
+                        string entity = g[i, j].getName();
+                        switch (entity)
+                        {
+                            case "brick":
+                                spriteBatch.Draw(brickTexture, position, Color.White);
+                                break;
+                            case "water":
+                                spriteBatch.Draw(waterTexture, position, Color.White);
+                                break;
+                            case "stone":
+                                spriteBatch.Draw(stoneTexture, position, Color.White);
+                                break;
+                            case "coin":
+                                spriteBatch.Draw(coinTexture, position, Color.White);
+                                break;
+                            case "lifepack":
+                                spriteBatch.Draw(lifepackTexture, position, Color.White);
+                                break;
+                            case "P0":
+                                //spriteBatch.Draw(playerTexture, position, Color.White);
+                                spriteBatch.Draw(playerTexture, new Vector2(position.X + 30, position.Y + 30), null, Color.White, MathHelper.ToRadians(g[i, j].getDirection()), new Vector2(30, 30), 1, SpriteEffects.None, 1);
+                                break;
+                            default:
+                                spriteBatch.Draw(landTexture, position, Color.White);
+                                break;
+                        }
+                    }
                 }
             }
         }
