@@ -33,7 +33,7 @@ namespace Tank_Game
             setPrevP(currentP);
         }
 
-        public override void updatePlayer(GridEntity p, Point currentP, int direction, int isShot, int health, int coins, int points)
+        public void updatePlayer(Player p, Point currentP, int direction, int isShot, int health, int coins, int points)
         {
             p.setCurrentP(currentP);
             p.setDirection(direction);
@@ -44,12 +44,12 @@ namespace Tank_Game
             p.setPrevP(currentP);
         }
 
-        public override void setDirection(int d)
+        public void setDirection(int d)
         {
             this.direction = d;
         }
 
-        public override float getDirection()
+        public float getDirection()
         {
             switch (direction)
             {
@@ -66,7 +66,7 @@ namespace Tank_Game
             }
         }
 
-        public override void setCurrentP(Point p)
+        public void setCurrentP(Point p)
         {
             this.currentP = p;
         }
@@ -76,17 +76,17 @@ namespace Tank_Game
             return currentP;
         }
 
-        public override void setPrevP(Point p)
+        public void setPrevP(Point p)
         {
             this.prevP = p;
         }
 
-        public override Point getPrevP()
+        public Point getPrevP()
         {
             return prevP;
         }
 
-        public override void setIsShot(int n)
+        public void setIsShot(int n)
         {
             this.shot = n;
         }
@@ -96,7 +96,7 @@ namespace Tank_Game
             return shot;
         }
 
-        public override void setPoints(int n)
+        public void setPoints(int n)
         {
             this.pointsEarned = n;
         }
@@ -106,7 +106,7 @@ namespace Tank_Game
             return pointsEarned;
         }
 
-        public override void setCoins(int n)
+        public void setCoins(int n)
         {
             this.coins = n;
         }
@@ -116,7 +116,7 @@ namespace Tank_Game
             return coins;
         }
 
-        public override void setHealth(int n)
+        public void setHealth(int n)
         {
             this.health = n;
         }

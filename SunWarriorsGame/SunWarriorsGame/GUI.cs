@@ -12,7 +12,7 @@ namespace TankClient
 {
     public partial class GUI : Form
     {
-        ConnectClient connect = ConnectClient.GetClient();
+        ConnectClient connect = new ConnectClient();
         public GUI()
         {
             

@@ -19,22 +19,24 @@ namespace SunWarriorsGame
         {
             Thread XNA = new Thread(new ThreadStart(StartXNA));
             XNA.Start();
-            Thread gui = new Thread(new ThreadStart(StartGUI));
-            gui.Start();
+            //Thread gui = new Thread(new ThreadStart(StartGUI));
+            //gui.Start();
         }
 
         static void StartXNA()
         {
+            ConnectClient client = new ConnectClient();
+            client.recivePool();
             Game1 game = new Game1();
             game.Run();
         }
 
         static void StartGUI()
         {
-            ConnectClient client = ConnectClient.GetClient();
-            Application.EnableVisualStyles();
+            ConnectClient client = new ConnectClient();
+            //Application.EnableVisualStyles();
             client.recivePool();
-            Application.Run(new GUI());
+            //Application.Run(new GUI());
         }
     }
 }

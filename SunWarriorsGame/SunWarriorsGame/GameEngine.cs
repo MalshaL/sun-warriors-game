@@ -15,7 +15,7 @@ namespace Tank_Game
         private static GameEngine gameEngine;
         private static object syncRoot = new object();
         //private static Game1 game;
-        private GridEntity me;
+        private Player me;
         private string playerName;      //player name (client)
         private int playerNum;          //player number
         private Point startLoc;         //start location of player
