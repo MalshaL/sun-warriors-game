@@ -79,6 +79,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AIController.cs" />
     <Compile Include="Brick.cs" />
     <Compile Include="CoinPile.cs" />
     <Compile Include="ConnectClient.cs" />
@@ -91,12 +92,16 @@
     </Compile>
     <Compile Include="GUI.Designer.cs" />
     <Compile Include="LifePack.cs" />
+    <Compile Include="Map.cs" />
     <Compile Include="Move.cs" />
     <Compile Include="MyPlayer.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="NodeComparer.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="SortedCostNodeList.cs" />
     <Compile Include="Stone.cs" />
     <Compile Include="Water.cs" />
   </ItemGroup>

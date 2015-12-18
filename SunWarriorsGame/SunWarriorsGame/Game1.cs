@@ -23,14 +23,14 @@ namespace SunWarriorsGame
             JUST_RELEASED,
             DOWN
         }
-        const int NUMBER_OF_BUTTONS = 6,
+        const int NUMBER_OF_BUTTONS = 7,
             JOIN_BUTTON_INDEX = 0,
             AIMODE_BUTTON_INDEX = 1,
             UP_BUTTON_INDEX = 2,
             DOWN_BUTTON_INDEX = 3,
             LEFT_BUTTON_INDEX = 4,
             RIGHT_BUTTON_INDEX = 5,
-            //SHOOT_BUTTON_INDEX = 6,
+            SHOOT_BUTTON_INDEX = 6,
             BUTTON_HEIGHT1 = 60,
             BUTTON_WIDTH1 = 130;
             //BUTTON_HEIGHT2 = 48,
@@ -62,6 +62,7 @@ namespace SunWarriorsGame
         Texture2D coinTexture;
         Texture2D lifepackTexture;
         Texture2D playerTexture;
+        AIController aiController = new AIController();
 
         public Game1()
         {
@@ -133,6 +134,7 @@ namespace SunWarriorsGame
             button_texture[DOWN_BUTTON_INDEX] = Content.Load<Texture2D>("down");
             button_texture[LEFT_BUTTON_INDEX] = Content.Load<Texture2D>("left");
             button_texture[RIGHT_BUTTON_INDEX] = Content.Load<Texture2D>("right");
+            button_texture[SHOOT_BUTTON_INDEX] = Content.Load<Texture2D>("shoot");
             //button_texture[MEDIUM_BUTTON_INDEX] =Content.Load<Texture2D>(@"images/medium");
             //button_texture[HARD_BUTTON_INDEX] =Content.Load<Texture2D>(@"images/hard");
         }
@@ -351,7 +353,7 @@ namespace SunWarriorsGame
                     client.SendData("JOIN#");
                     break;
                 case AIMODE_BUTTON_INDEX:
-                    
+                    aiController.startAI();
                     break;
                 case UP_BUTTON_INDEX:
                     client.SendData("UP#");
@@ -364,6 +366,9 @@ namespace SunWarriorsGame
                     break;
                 case RIGHT_BUTTON_INDEX:
                     client.SendData("RIGHT#");
+                    break;
+                case SHOOT_BUTTON_INDEX:
+                    client.SendData("SHOOT#");
                     break;
                 //case HARD_BUTTON_INDEX:
                 //    background_color = Color.Red;
