@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using SunWarriorsGame;
+using System.Timers;
 
 namespace Tank_Game
 {
@@ -19,16 +20,19 @@ namespace Tank_Game
         private string playerName;      //player name (client)
         private int playerNum;          //player number
         private Point startLoc;         //start location of player
-        private int starDir;            //start direction of player
+        private int startDir;            //start direction of player
         private GridEntity[,] grid;     //the grid
         private int mapSize;            //no of rows and columns in the grid
         private List<Player> playerList;
+        private List<String> playerNames;
         private List<Point> brickLocations;
         //private List<GridEntity> stoneLocations;
         //private List<GridEntity> waterLocations;
         //private List<GridEntity> coinLocations;
         private List<char> msgTypes;
         bool isFirstDecode = true;
+        private String otherMessage = "";
+        private int players = 0;
 
         #endregion
 
@@ -58,63 +62,50 @@ namespace Tank_Game
 
         public void handleMessage(String message)
         {
-            char firstChar = message[0];
-            //if (message.ElementAt(message.Length - 1) == '?')
-            //{
-            //    message = message.Substring(0, message.Length - 2);
-            //    Console.WriteLine("????????hereeee");
-            //}
-            //else
-            //{
-            //    message = message.Substring(0, message.Length - 1);
-            //    Console.WriteLine("########hereeeeeeee");
-            //}
-            message = message.Substring(0, message.LastIndexOf("#"));
-            if (msgTypes.Contains(firstChar))
+            Console.WriteLine(message);
+            if (message[1] == ':')
             {
-                if (firstChar == 'S')
+                char firstChar = message[0];
+                //if (message.ElementAt(message.Length - 1) == '?')
+                //{
+                //    message = message.Substring(0, message.Length - 2);
+                //    Console.WriteLine("????????hereeee");
+                //}
+                //else
+                //{
+                //    message = message.Substring(0, message.Length - 1);
+                //    Console.WriteLine("########hereeeeeeee");
+                //}
+                message = message.Substring(0, message.LastIndexOf("#"));
+                if (msgTypes.Contains(firstChar))
                 {
-                    initialize(message);
-                }
-                if (firstChar == 'I')
-                {
-                    generateGrid(message);
-                }
-                if (firstChar == 'G')
-                {
-                    updateMap(message);
-                }
-                if (firstChar == 'C')
-                {
-                    handleCoins(message, grid);
-                }
-                if (firstChar == 'L')
-                {
-                    handleLifePacks(message, grid);
+                    if (firstChar == 'S')
+                    {
+                        initialize(message);
+                    }
+                    if (firstChar == 'I')
+                    {
+                        generateGrid(message);
+                    }
+                    if (firstChar == 'G')
+                    {
+                        updateMap(message);
+                    }
+                    if (firstChar == 'C')
+                    {
+                        handleCoins(message, grid);
+                    }
+                    if (firstChar == 'L')
+                    {
+                        handleLifePacks(message, grid);
+                    }
                 }
             }
             else
             {
-
+                message = message.Substring(0, message.LastIndexOf("#"));
+                setOtherMsg(message);
             }
-        }
-
-        private void initialize(string starter)
-        {
-            Console.WriteLine("***********************************************************");
-            Console.WriteLine("**                     GAME STARTED!                     **");
-            Console.WriteLine("***********************************************************");
-            playerList = new List<Player>();
-            //playerName = starter.Substring(2, 4);
-            starter = starter.Substring(2);
-            string[] tokens = starter.Split(';');
-            playerName = tokens[0];
-            playerNum = int.Parse(playerName.Substring(1));
-            string loc = tokens[1];
-            startLoc = new Point(int.Parse(loc.Split(',')[0]), int.Parse(loc.Split(',')[1]));
-            starDir = int.Parse(tokens[2]);
-            me = new MyPlayer(startLoc, playerName, starDir);
-            //Console.WriteLine("Player is: "+me.getName() + " at " + me.getCurrentP() + " facing " + me.getDirection());
         }
 
         private void generateGrid(string map)
@@ -141,9 +132,31 @@ namespace Tank_Game
         private void setLocations(string map, GridEntity[,] grid)
         {
             string[] splittedValues = map.Split(':');
+            playerName = splittedValues[1];
+            playerNum = int.Parse(playerName.Substring(1));
+            setOtherMsg("You are Player " + playerNum + "in  " + getPlayerColor());
             setLocationLists(splittedValues[2], "brick", grid);
             setLocationLists(splittedValues[3], "stone", grid);
             setLocationLists(splittedValues[4], "water", grid);
+        }
+
+        private String getPlayerColor()
+        {
+            switch (playerNum)
+            {
+                case 0:
+                    return "Red";
+                case 1:
+                    return "Purple";
+                case 2:
+                    return "Blue";
+                case 3:
+                    return "Brown";
+                case 4:
+                    return "Green";
+                default:
+                    return "";
+            }
         }
 
         private void setLocationLists(string values, string type, GridEntity[,] grid)
@@ -180,64 +193,97 @@ namespace Tank_Game
             }
         }
 
+        private void initialize(string starter)
+        {
+            playerList = new List<Player>();
+            playerNames = new List<String>();
+            starter = starter.Substring(2);
+            string[] splittedValues = starter.Split(':');
+            foreach (String s in splittedValues)
+            {
+                string[] tokens = s.Split(';');
+                string loc = tokens[1];
+                startLoc = new Point(int.Parse(loc.Split(',')[0]), int.Parse(loc.Split(',')[1]));
+                if (tokens[0].Equals(playerName))           //me
+                {
+                    startDir = int.Parse(tokens[2]);
+                    me = new MyPlayer(startLoc, playerName, startDir);
+                    playerNames.Add(playerName);
+                }
+                else
+                {
+                    Player player = new Player(startLoc, tokens[0], int.Parse(tokens[2]));
+                    playerList.Add(player);
+                    players += 1;
+                    playerNames.Add(tokens[0]);
+                }
+            }
+        }
+
         private void updateMap(string msg)
         {
             msg = msg.Substring(2);
             string[] splittedValues = msg.Split(':');
-            if (isFirstDecode)
-            {
-                for (int i = 0; i < splittedValues.Length - 1; i++)
+            for (int i = 0; i < splittedValues.Length - 1; i++)             //for each player's details
                 {
                     string[] tokens = splittedValues[i].Split(';');
+                    String name = tokens[0];
+                    //int num = int.Parse(name.Substring(1).ToString());
                     Point p = new Point(int.Parse(tokens[1].Split(',')[0]), int.Parse(tokens[1].Split(',')[1]));
-                    if ((i) != playerNum)
+                    if (!name.Equals(playerName))                           //not me
                     {
-                        Player player = new Player(p, tokens[0], int.Parse(tokens[2]));
-                        player.updatePlayer(player, p, int.Parse(tokens[2]), int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]));
-                        playerList.Add(player);
-                        grid[p.Y, p.X] = player;
-                    }                    
-                    else
+                        if (playerNames.Contains(name))                     //player already in game
+                        {
+                            Player pl = getPlayerFromList(name);
+                            Point k = new Point(pl.getPrevP().X, pl.getPrevP().Y);
+                            if (grid[k.Y, k.X].getName() == pl.getName())
+                            {
+                                grid[k.Y, k.X] = new GridEntity(k);
+                            }
+                            pl.updatePlayer(pl, p, int.Parse(tokens[2]), int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]));
+                            grid[p.Y, p.X] = pl;
+                        }
+                        else                                                //new player
+                        {
+                            Player player = new Player(p, tokens[0], int.Parse(tokens[2]));
+                            player.updatePlayer(player, p, int.Parse(tokens[2]), int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]));
+                            grid[p.Y, p.X] = player;
+                        }
+                    }
+                    else                                                     //me
                     {
-                        me.updatePlayer(me, p, int.Parse(tokens[2]), int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]));
-                        grid[p.Y, p.X] = me;                        
+                        if (isFirstDecode)                                   //my first decode
+                        {
+                            me.updatePlayer(me, p, int.Parse(tokens[2]), int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]));
+                            grid[p.Y, p.X] = me;
+                            isFirstDecode = false;
+                        }
+                        else                                                  //me already in game
+                        {
+                            Point k = new Point(me.getPrevP().X, me.getPrevP().Y);
+                            if (grid[k.Y, k.X].getName() == me.getName())
+                            {
+                                grid[k.Y, k.X] = new GridEntity(k);
+                            }
+                            me.updatePlayer(me, p, int.Parse(tokens[2]), int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]));
+                            grid[p.Y, p.X] = me;
+                        }
                     }
                 }
-                isFirstDecode = false;
-
-            }
-            else{
-                for (int i = 0; i < splittedValues.Length - 1; i++)
-                {
-                    string[] tokens = splittedValues[i].Split(';');
-                    Point p = new Point(int.Parse(tokens[1].Split(',')[0]), int.Parse(tokens[1].Split(',')[1]));
-                    if ((i) != playerNum)
-                    {
-                        Point k = new Point(playerList.ElementAt(i).getPrevP().X, playerList.ElementAt(i).getPrevP().Y);
-                        if (grid[k.Y, k.X].getName()==playerList.ElementAt(i).getName())
-                        {
-                            grid[k.Y, k.X] = new GridEntity(k);
-                        }
-                        playerList.ElementAt(i).updatePlayer(playerList.ElementAt(i), p, int.Parse(tokens[2]), int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]));
-                        grid[p.Y, p.X] = playerList.ElementAt(i);
-                    }                    
-                    else
-                    {
-                        Point k = new Point(me.getPrevP().X, me.getPrevP().Y);
-                        if (grid[k.Y, k.X].getName() == me.getName())
-                        {
-                            grid[k.Y, k.X] = new GridEntity(k);
-                        }
-                        me.updatePlayer(me, p, int.Parse(tokens[2]), int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]));
-                        grid[p.Y, p.X] = me;                       
-                    }
-                }
-            }
-            //updateBricks(splittedValues[splittedValues.Length - 1]);
+            updateBricks(splittedValues[splittedValues.Length - 1], grid);
             displayGrid(grid);
             //game.setGrid(grid);
         }
 
+        public Player getPlayerFromList(String name)
+        {
+            foreach (Player p in playerList){
+                if (p.getName().Equals(name)){
+                    return p;
+                }
+            }
+            return null;
+        }
 
         public void displayGrid(GridEntity[,] grid)
         {
@@ -253,25 +299,14 @@ namespace Tank_Game
             Console.WriteLine();
         }
 
-        public void updateBricks(string splittedValues)
-        {
-            
+        public void updateBricks(string splittedValues, GridEntity[,] grid)
+        {   
             string[] bricks = splittedValues.Split(';');
-            List<Point> brickList = new List<Point>();
-            for (int j = 0; j < bricks.Length; j++)
+            for (int i = 0; i < bricks.Length; i++)
             {
-                Point l = new Point(int.Parse(bricks[j].Split(',')[0]), int.Parse(bricks[j].Split(',')[1]));
-                brickList.Add(l);
-            }
-            for (int n = 0; n < brickLocations.Count(); n++)
-            {
-                //Console.WriteLine("uppppppppp "+brickLocations.ElementAt(n));
-                if (brickList.Contains(brickLocations.ElementAt(n)))
-                {
-                    Point q = new Point(brickLocations.ElementAt(n).X, brickLocations.ElementAt(n).Y);
-                    grid[q.Y, q.X] = new GridEntity(q);
-                    //Console.WriteLine("downnnnnn " + q);
-                }
+                string[] values = bricks[i].Split(',');
+                Point l = new Point((int.Parse(values[0])), (int.Parse(values[1])));
+                grid[(int.Parse(values[1])), (int.Parse(values[0]))].setDamageLevel(int.Parse(values[2]));
             }
         }
 
@@ -280,9 +315,22 @@ namespace Tank_Game
             string[] tokens = msg.Split(':');
             Point p = new Point(int.Parse(tokens[1].Split(',')[0]), int.Parse(tokens[1].Split(',')[1]));
             grid[p.Y, p.X] = new CoinPile(p, int.Parse(tokens[2]), 0, int.Parse(tokens[3]));
-            
+            InitTimer(p, int.Parse(tokens[2]), grid);
             //coinLocations.Add(p);
             //CoinPile coins = new CoinPile(p, int.Parse(tokens[2]), 0, int.Parse(tokens[3]));
+        }
+
+        private static void InitTimer(Point p, int lifeTime, GridEntity[,] grid)
+        {
+            Timer aTimer = new Timer();
+            aTimer.Elapsed += (source, e) => OnTimedEvent(source, p, grid);
+            aTimer.Interval = lifeTime;
+            aTimer.Start();
+        }
+
+        private static void OnTimedEvent(object source, Point p, GridEntity[,] grid)
+        {
+            grid[p.Y, p.X] = new GridEntity(p);
         }
 
         private void handleLifePacks(string msg, GridEntity[,] grid)
@@ -290,6 +338,7 @@ namespace Tank_Game
             string[] tokens = msg.Split(':');
             Point p = new Point(int.Parse(tokens[1].Split(',')[0]), int.Parse(tokens[1].Split(',')[1]));
             grid[p.Y, p.X] = new LifePack(p, int.Parse(tokens[2]), 0);
+            InitTimer(p, int.Parse(tokens[2]), grid);
             //coinLocations.Add(p);
             //LifePack lifepack = new LifePack(p, int.Parse(tokens[2]), 0);
         }
@@ -297,6 +346,34 @@ namespace Tank_Game
         public GridEntity[,] getGrid()
         {
             return grid;
+        }
+
+        public void setOtherMsg(String msg){
+            msg = msg.Replace("_", " ");
+            otherMessage = msg;
+        }
+
+        public String getOtherMsg()
+        {
+            return otherMessage;
+        }
+
+        private void InitTimer2()
+        {
+            Timer aTimer = new Timer();
+            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent2);
+            aTimer.Interval = 2000;
+            aTimer.Start();
+        }
+
+        private void OnTimedEvent2(object source, ElapsedEventArgs e)
+        {
+            setOtherMsg("");
+        }
+
+        public Player getMyTank()
+        {
+            return me;
         }
     }
 }

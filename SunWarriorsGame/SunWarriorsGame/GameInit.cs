@@ -26,7 +26,7 @@ namespace SunWarriorsGame
         static void StartXNA()
         {
             ConnectClient client = new ConnectClient();
-            client.recivePool();
+            //client.recivePool();
             Game1 game = new Game1();
             game.Run();
         }
@@ -35,7 +35,7 @@ namespace SunWarriorsGame
         {
             ConnectClient client = new ConnectClient();
             //Application.EnableVisualStyles();
-            client.recivePool();
+            //client.recivePool();
             //Application.Run(new GUI());
         }
     }

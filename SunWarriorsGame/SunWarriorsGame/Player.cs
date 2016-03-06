@@ -17,9 +17,6 @@ namespace Tank_Game
         private Point prevP;
         private int direction = 0;
         private int shot = 0;
-        private int pointsEarned = 0;
-        private int coins = 0;
-        private int health = 0;
         private bool isAlive = true;
         //private bool invalidCell = false;
        // private DateTime updatedTime;
@@ -29,6 +26,7 @@ namespace Tank_Game
         {
             setName(name);
             setCurrentP(currentP);
+            setPosition(currentP);
             setDirection(direction);
             setPrevP(currentP);
         }
@@ -36,6 +34,7 @@ namespace Tank_Game
         public void updatePlayer(Player p, Point currentP, int direction, int isShot, int health, int coins, int points)
         {
             p.setCurrentP(currentP);
+            p.setPosition(currentP);
             p.setDirection(direction);
             p.setIsShot(isShot);
             p.setHealth(health);
@@ -44,27 +43,7 @@ namespace Tank_Game
             p.setPrevP(currentP);
         }
 
-        public void setDirection(int d)
-        {
-            this.direction = d;
-        }
-
-        public float getDirection()
-        {
-            switch (direction)
-            {
-                case 0:
-                    return 0;
-                case 1:
-                    return 90;
-                case 2:
-                    return 180;
-                case 3:
-                    return 270;
-                default:
-                    return 0;
-            }
-        }
+      
 
         public void setCurrentP(Point p)
         {
@@ -94,36 +73,6 @@ namespace Tank_Game
         public int getIsShot()
         {
             return shot;
-        }
-
-        public void setPoints(int n)
-        {
-            this.pointsEarned = n;
-        }
-
-        public int getPoints()
-        {
-            return pointsEarned;
-        }
-
-        public void setCoins(int n)
-        {
-            this.coins = n;
-        }
-
-        public int getCoins()
-        {
-            return coins;
-        }
-
-        public void setHealth(int n)
-        {
-            this.health = n;
-        }
-
-        public int getHealth()
-        {
-            return health;
         }
 
         public void setIsAlive(bool n)

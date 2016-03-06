@@ -9,21 +9,13 @@ namespace Tank_Game
 {
     public class Brick : GridEntity
     {
-        int damageLevel = 0;
+        //int damageLevel = 0;
         public Brick(Point p) : base(p)
         {
             this.setName("brick");
             //this.setDamageLevel(damageLevel);
         }
 
-        public void setDamageLevel(int level)
-        {
-            this.damageLevel = level;
-        }
-
-        public int getDamageLevel()
-        {
-            return damageLevel;
-        }
+        
     }
 }

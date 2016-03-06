@@ -13,3 +13,17 @@ Content\left.xnb
 Content\right.xnb
 Content\up.xnb
 Content\shoot.xnb
+Content\brick75Texture.xnb
+Content\brick50Texture.xnb
+Content\brick25Texture.xnb
+Content\tank2.xnb
+Content\tank3.xnb
+Content\tank4.xnb
+Content\tank5.xnb
+Content\bullet.xnb
+Content\smoke.xnb
+Content\blankButton.xnb
+Content\exitButton.xnb
+Content\myFont.xnb
+Content\scoreBoard.xnb
+Content\messageBox.xnb

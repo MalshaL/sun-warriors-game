@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2015-12-09T20:37:33.3572085+05:30</Time>
+      <Time>2015-11-13T15:24:48+05:30</Time>
     </Item>
     <Item>
       <Source>landTexture.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\landTexture.xnb</Output>
-      <Time>2015-12-09T22:47:16.3204503+05:30</Time>
+      <Time>2016-02-27T14:18:59.7310605+05:30</Time>
     </Item>
     <Item>
       <Source>stoneTexture.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\stoneTexture.xnb</Output>
-      <Time>2015-12-09T22:47:16.3354526+05:30</Time>
+      <Time>2016-03-02T10:51:23.9022641+05:30</Time>
     </Item>
     <Item>
       <Source>tank.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank.xnb</Output>
-      <Time>2015-12-16T08:26:10.1071409+05:30</Time>
+      <Time>2016-02-27T16:08:16.7902096+05:30</Time>
     </Item>
     <Item>
       <Source>waterTexture.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\waterTexture.xnb</Output>
-      <Time>2015-12-09T22:47:16.3904917+05:30</Time>
+      <Time>2016-03-05T01:16:01.9776313+05:30</Time>
     </Item>
     <Item>
       <Source>brickTexture.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\brickTexture.xnb</Output>
-      <Time>2015-12-09T22:48:02.4150534+05:30</Time>
+      <Time>2016-03-03T00:01:11.3364849+05:30</Time>
     </Item>
     <Item>
       <Source>coin.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\coin.xnb</Output>
-      <Time>2015-12-09T23:12:07.9286866+05:30</Time>
+      <Time>2016-03-02T13:31:09.4332184+05:30</Time>
     </Item>
     <Item>
       <Source>lifepack.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\lifepack.xnb</Output>
-      <Time>2015-12-16T08:34:14.0429968+05:30</Time>
+      <Time>2016-03-02T13:08:56.7675022+05:30</Time>
     </Item>
     <Item>
       <Source>joinbutton.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\joinbutton.xnb</Output>
-      <Time>2015-12-18T10:32:42.0294622+05:30</Time>
+      <Time>2016-03-05T03:12:11.2297853+05:30</Time>
     </Item>
     <Item>
       <Source>aimodebutton.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\aimodebutton.xnb</Output>
-      <Time>2015-12-18T12:13:30.9360191+05:30</Time>
+      <Time>2016-03-05T03:13:55.133527+05:30</Time>
     </Item>
     <Item>
       <Source>down.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\down.xnb</Output>
-      <Time>2015-12-18T12:13:30.9470188+05:30</Time>
+      <Time>2016-03-05T03:26:35.5678514+05:30</Time>
     </Item>
     <Item>
       <Source>left.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\left.xnb</Output>
-      <Time>2015-12-18T12:13:31.0040619+05:30</Time>
+      <Time>2016-03-05T03:23:42.7894903+05:30</Time>
     </Item>
     <Item>
       <Source>right.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\right.xnb</Output>
-      <Time>2015-12-18T12:13:31.0140571+05:30</Time>
+      <Time>2016-03-05T03:25:53.1208515+05:30</Time>
     </Item>
     <Item>
       <Source>up.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\up.xnb</Output>
-      <Time>2015-12-18T12:13:31.0240706+05:30</Time>
+      <Time>2016-03-05T03:24:43.2878482+05:30</Time>
     </Item>
     <Item>
       <Source>shoot.png</Source>
@@ -134,7 +134,133 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\shoot.xnb</Output>
-      <Time>2015-12-18T12:23:46.1271881+05:30</Time>
+      <Time>2016-03-05T03:18:46.4281412+05:30</Time>
+    </Item>
+    <Item>
+      <Source>brick75Texture.png</Source>
+      <Name>brick75Texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\brick75Texture.xnb</Output>
+      <Time>2016-03-03T06:46:54.7545188+05:30</Time>
+    </Item>
+    <Item>
+      <Source>brick50Texture.png</Source>
+      <Name>brick50Texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\brick50Texture.xnb</Output>
+      <Time>2016-03-03T06:49:17.2148852+05:30</Time>
+    </Item>
+    <Item>
+      <Source>brick25Texture.png</Source>
+      <Name>brick25Texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\brick25Texture.xnb</Output>
+      <Time>2016-03-03T06:52:31.4252456+05:30</Time>
+    </Item>
+    <Item>
+      <Source>tank2.png</Source>
+      <Name>tank2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank2.xnb</Output>
+      <Time>2016-02-29T19:04:56.3817833+05:30</Time>
+    </Item>
+    <Item>
+      <Source>tank3.png</Source>
+      <Name>tank3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank3.xnb</Output>
+      <Time>2016-03-02T22:59:54.0137373+05:30</Time>
+    </Item>
+    <Item>
+      <Source>tank4.png</Source>
+      <Name>tank4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank4.xnb</Output>
+      <Time>2016-03-02T23:25:07.8510039+05:30</Time>
+    </Item>
+    <Item>
+      <Source>tank5.png</Source>
+      <Name>tank5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank5.xnb</Output>
+      <Time>2016-03-02T23:40:35.965016+05:30</Time>
+    </Item>
+    <Item>
+      <Source>bullet.png</Source>
+      <Name>bullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\bullet.xnb</Output>
+      <Time>2016-03-05T01:40:04.6462645+05:30</Time>
+    </Item>
+    <Item>
+      <Source>smoke.png</Source>
+      <Name>smoke</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\smoke.xnb</Output>
+      <Time>2016-03-04T13:17:54.2608619+05:30</Time>
+    </Item>
+    <Item>
+      <Source>blankButton.png</Source>
+      <Name>blankButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\blankButton.xnb</Output>
+      <Time>2016-03-05T08:25:33.815029+05:30</Time>
+    </Item>
+    <Item>
+      <Source>exitButton.png</Source>
+      <Name>exitButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\exitButton.xnb</Output>
+      <Time>2016-03-05T08:13:54.0696727+05:30</Time>
+    </Item>
+    <Item>
+      <Source>myFont.spritefont</Source>
+      <Name>myFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\myFont.xnb</Output>
+      <Time>2016-03-05T08:20:12.4627116+05:30</Time>
+    </Item>
+    <Item>
+      <Source>scoreBoard.png</Source>
+      <Name>scoreBoard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\scoreBoard.xnb</Output>
+      <Time>2016-03-05T09:17:33.0438983+05:30</Time>
+    </Item>
+    <Item>
+      <Source>messageBox.png</Source>
+      <Name>messageBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\messageBox.xnb</Output>
+      <Time>2016-03-05T14:13:39.1166192+05:30</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -79,9 +79,11 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AIController1.cs" />
     <Compile Include="AIController.cs" />
     <Compile Include="Brick.cs" />
     <Compile Include="CoinPile.cs" />
+    <Compile Include="ConnectClient2.cs" />
     <Compile Include="ConnectClient.cs" />
     <Compile Include="Constant.cs" />
     <Compile Include="GameEngine.cs" />

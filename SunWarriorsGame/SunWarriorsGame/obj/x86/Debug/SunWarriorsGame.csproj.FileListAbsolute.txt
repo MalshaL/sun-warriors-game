@@ -22,3 +22,17 @@ F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Deb
 F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\right.xnb
 F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\up.xnb
 F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\shoot.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\brick75Texture.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\brick50Texture.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\brick25Texture.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank2.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank3.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank4.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\tank5.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\bullet.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\smoke.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\blankButton.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\exitButton.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\myFont.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\scoreBoard.xnb
+F:\Sem 4\PC 2_1_NGPA\SunWarriorsGame\SunWarriorsGame\SunWarriorsGame\bin\x86\Debug\Content\messageBox.xnb
